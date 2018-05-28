@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D9442754B321AF9628B1A4FB /* Pods_Soberide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06243BD9DBC5E8E13E5A5198 /* Pods_Soberide.framework */; };
+		E303CE9320BCC3C80061E487 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E303CE9220BCC3C80061E487 /* GoogleService-Info.plist */; };
+		E30D0F3220B8C537008FB956 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D0F3120B8C537008FB956 /* UserView.swift */; };
+		E30D0F3420B8C544008FB956 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D0F3320B8C544008FB956 /* MapView.swift */; };
+		E30D0F3620B8C564008FB956 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D0F3520B8C564008FB956 /* ChatView.swift */; };
+		E30D0F3820B8C58F008FB956 /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D0F3720B8C58F008FB956 /* AdminView.swift */; };
+		E30D0F3A20B8C59D008FB956 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D0F3920B8C59D008FB956 /* DayView.swift */; };
+		E30D0F3C20B8C5AD008FB956 /* RegisterGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D0F3B20B8C5AD008FB956 /* RegisterGroupView.swift */; };
 		E3161F7020A0F5DB005CE07B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3161F6F20A0F5DB005CE07B /* AppDelegate.swift */; };
 		E3161F7220A0F5DB005CE07B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3161F7120A0F5DB005CE07B /* ViewController.swift */; };
 		E3161F7520A0F5DB005CE07B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3161F7320A0F5DB005CE07B /* Main.storyboard */; };
@@ -15,6 +23,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06243BD9DBC5E8E13E5A5198 /* Pods_Soberide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soberide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C443E2888AC02CCCF610AC1 /* Pods-Soberide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soberide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Soberide/Pods-Soberide.release.xcconfig"; sourceTree = "<group>"; };
+		8FBA821C80C682894EB7A496 /* Pods-Soberide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soberide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Soberide/Pods-Soberide.debug.xcconfig"; sourceTree = "<group>"; };
+		E303CE9220BCC3C80061E487 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E30D0F3120B8C537008FB956 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		E30D0F3320B8C544008FB956 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E30D0F3520B8C564008FB956 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		E30D0F3720B8C58F008FB956 /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
+		E30D0F3920B8C59D008FB956 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		E30D0F3B20B8C5AD008FB956 /* RegisterGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterGroupView.swift; sourceTree = "<group>"; };
 		E3161F6C20A0F5DB005CE07B /* Soberide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soberide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3161F6F20A0F5DB005CE07B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3161F7120A0F5DB005CE07B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +47,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9442754B321AF9628B1A4FB /* Pods_Soberide.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C4EC141AC1B207A7407A6EC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06243BD9DBC5E8E13E5A5198 /* Pods_Soberide.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E3161F6320A0F5DB005CE07B = {
 			isa = PBXGroup;
 			children = (
 				E3161F6E20A0F5DB005CE07B /* Soberide */,
 				E3161F6D20A0F5DB005CE07B /* Products */,
+				FEE6E36F0DEB09905AD08F14 /* Pods */,
+				C4EC141AC1B207A7407A6EC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,11 +86,27 @@
 				E3161F6F20A0F5DB005CE07B /* AppDelegate.swift */,
 				E3161F7120A0F5DB005CE07B /* ViewController.swift */,
 				E3161F7320A0F5DB005CE07B /* Main.storyboard */,
+				E30D0F3B20B8C5AD008FB956 /* RegisterGroupView.swift */,
+				E30D0F3920B8C59D008FB956 /* DayView.swift */,
+				E30D0F3720B8C58F008FB956 /* AdminView.swift */,
+				E30D0F3520B8C564008FB956 /* ChatView.swift */,
+				E303CE9220BCC3C80061E487 /* GoogleService-Info.plist */,
+				E30D0F3320B8C544008FB956 /* MapView.swift */,
+				E30D0F3120B8C537008FB956 /* UserView.swift */,
 				E3161F7620A0F5DB005CE07B /* Assets.xcassets */,
 				E3161F7820A0F5DB005CE07B /* LaunchScreen.storyboard */,
 				E3161F7B20A0F5DB005CE07B /* Info.plist */,
 			);
 			path = Soberide;
+			sourceTree = "<group>";
+		};
+		FEE6E36F0DEB09905AD08F14 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FBA821C80C682894EB7A496 /* Pods-Soberide.debug.xcconfig */,
+				8C443E2888AC02CCCF610AC1 /* Pods-Soberide.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +116,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E3161F7E20A0F5DB005CE07B /* Build configuration list for PBXNativeTarget "Soberide" */;
 			buildPhases = (
+				B7CB2804E427C1AAD9EFB618 /* [CP] Check Pods Manifest.lock */,
 				E3161F6820A0F5DB005CE07B /* Sources */,
 				E3161F6920A0F5DB005CE07B /* Frameworks */,
 				E3161F6A20A0F5DB005CE07B /* Resources */,
+				027B2DDAB7540C0688F0E203 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3161F7A20A0F5DB005CE07B /* LaunchScreen.storyboard in Resources */,
+				E303CE9320BCC3C80061E487 /* GoogleService-Info.plist in Resources */,
 				E3161F7720A0F5DB005CE07B /* Assets.xcassets in Resources */,
 				E3161F7520A0F5DB005CE07B /* Main.storyboard in Resources */,
 			);
@@ -131,12 +179,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		027B2DDAB7540C0688F0E203 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Soberide/Pods-Soberide-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JTCalendar/JTCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Soberide/Pods-Soberide-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7CB2804E427C1AAD9EFB618 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Soberide-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E3161F6820A0F5DB005CE07B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E30D0F3A20B8C59D008FB956 /* DayView.swift in Sources */,
 				E3161F7220A0F5DB005CE07B /* ViewController.swift in Sources */,
+				E30D0F3420B8C544008FB956 /* MapView.swift in Sources */,
+				E30D0F3820B8C58F008FB956 /* AdminView.swift in Sources */,
+				E30D0F3620B8C564008FB956 /* ChatView.swift in Sources */,
+				E30D0F3C20B8C5AD008FB956 /* RegisterGroupView.swift in Sources */,
+				E30D0F3220B8C537008FB956 /* UserView.swift in Sources */,
 				E3161F7020A0F5DB005CE07B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,12 +369,13 @@
 		};
 		E3161F7F20A0F5DB005CE07B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FBA821C80C682894EB7A496 /* Pods-Soberide.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Soberide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = None.Soberide;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grantparton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -286,12 +384,13 @@
 		};
 		E3161F8020A0F5DB005CE07B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C443E2888AC02CCCF610AC1 /* Pods-Soberide.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Soberide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = None.Soberide;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grantparton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
