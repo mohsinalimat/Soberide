@@ -20,6 +20,7 @@
 		E3161F7520A0F5DB005CE07B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3161F7320A0F5DB005CE07B /* Main.storyboard */; };
 		E3161F7720A0F5DB005CE07B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3161F7620A0F5DB005CE07B /* Assets.xcassets */; };
 		E3161F7A20A0F5DB005CE07B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3161F7820A0F5DB005CE07B /* LaunchScreen.storyboard */; };
+		E33D009D20BCE6A2002CA533 /* RegisterUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33D009C20BCE6A2002CA533 /* RegisterUserView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E3161F7620A0F5DB005CE07B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3161F7920A0F5DB005CE07B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3161F7B20A0F5DB005CE07B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E33D009C20BCE6A2002CA533 /* RegisterUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				E3161F6F20A0F5DB005CE07B /* AppDelegate.swift */,
 				E3161F7120A0F5DB005CE07B /* ViewController.swift */,
 				E3161F7320A0F5DB005CE07B /* Main.storyboard */,
+				E33D009C20BCE6A2002CA533 /* RegisterUserView.swift */,
 				E30D0F3B20B8C5AD008FB956 /* RegisterGroupView.swift */,
 				E30D0F3920B8C59D008FB956 /* DayView.swift */,
 				E30D0F3720B8C58F008FB956 /* AdminView.swift */,
@@ -189,12 +192,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Soberide/Pods-Soberide-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/JTCalendar/JTCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +235,7 @@
 				E30D0F3A20B8C59D008FB956 /* DayView.swift in Sources */,
 				E3161F7220A0F5DB005CE07B /* ViewController.swift in Sources */,
 				E30D0F3420B8C544008FB956 /* MapView.swift in Sources */,
+				E33D009D20BCE6A2002CA533 /* RegisterUserView.swift in Sources */,
 				E30D0F3820B8C58F008FB956 /* AdminView.swift in Sources */,
 				E30D0F3620B8C564008FB956 /* ChatView.swift in Sources */,
 				E30D0F3C20B8C5AD008FB956 /* RegisterGroupView.swift in Sources */,
