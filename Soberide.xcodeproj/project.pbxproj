@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		D9442754B321AF9628B1A4FB /* Pods_Soberide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06243BD9DBC5E8E13E5A5198 /* Pods_Soberide.framework */; };
 		E303CE9320BCC3C80061E487 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E303CE9220BCC3C80061E487 /* GoogleService-Info.plist */; };
+		E307492920C2102C000BEAC8 /* DateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E307492720C2102C000BEAC8 /* DateCell.xib */; };
+		E307492A20C2102C000BEAC8 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E307492820C2102C000BEAC8 /* DateCell.swift */; };
 		E30D0F3220B8C537008FB956 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D0F3120B8C537008FB956 /* UserView.swift */; };
 		E30D0F3420B8C544008FB956 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D0F3320B8C544008FB956 /* MapView.swift */; };
 		E30D0F3620B8C564008FB956 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D0F3520B8C564008FB956 /* ChatView.swift */; };
 		E30D0F3820B8C58F008FB956 /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D0F3720B8C58F008FB956 /* AdminView.swift */; };
-		E30D0F3A20B8C59D008FB956 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D0F3920B8C59D008FB956 /* DayView.swift */; };
 		E30D0F3C20B8C5AD008FB956 /* RegisterGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D0F3B20B8C5AD008FB956 /* RegisterGroupView.swift */; };
 		E3161F7020A0F5DB005CE07B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3161F6F20A0F5DB005CE07B /* AppDelegate.swift */; };
 		E3161F7220A0F5DB005CE07B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3161F7120A0F5DB005CE07B /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 		E3161F7720A0F5DB005CE07B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3161F7620A0F5DB005CE07B /* Assets.xcassets */; };
 		E3161F7A20A0F5DB005CE07B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3161F7820A0F5DB005CE07B /* LaunchScreen.storyboard */; };
 		E33D009D20BCE6A2002CA533 /* RegisterUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33D009C20BCE6A2002CA533 /* RegisterUserView.swift */; };
+		E33D009F20C0EB4F002CA533 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33D009E20C0EB4F002CA533 /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,11 +30,12 @@
 		8C443E2888AC02CCCF610AC1 /* Pods-Soberide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soberide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Soberide/Pods-Soberide.release.xcconfig"; sourceTree = "<group>"; };
 		8FBA821C80C682894EB7A496 /* Pods-Soberide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soberide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Soberide/Pods-Soberide.debug.xcconfig"; sourceTree = "<group>"; };
 		E303CE9220BCC3C80061E487 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E307492720C2102C000BEAC8 /* DateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateCell.xib; sourceTree = "<group>"; };
+		E307492820C2102C000BEAC8 /* DateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 		E30D0F3120B8C537008FB956 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		E30D0F3320B8C544008FB956 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		E30D0F3520B8C564008FB956 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		E30D0F3720B8C58F008FB956 /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
-		E30D0F3920B8C59D008FB956 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		E30D0F3B20B8C5AD008FB956 /* RegisterGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterGroupView.swift; sourceTree = "<group>"; };
 		E3161F6C20A0F5DB005CE07B /* Soberide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soberide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3161F6F20A0F5DB005CE07B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 		E3161F7920A0F5DB005CE07B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3161F7B20A0F5DB005CE07B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E33D009C20BCE6A2002CA533 /* RegisterUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserView.swift; sourceTree = "<group>"; };
+		E33D009E20C0EB4F002CA533 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +92,11 @@
 				E3161F6F20A0F5DB005CE07B /* AppDelegate.swift */,
 				E3161F7120A0F5DB005CE07B /* ViewController.swift */,
 				E3161F7320A0F5DB005CE07B /* Main.storyboard */,
+				E33D009E20C0EB4F002CA533 /* CustomCell.swift */,
 				E33D009C20BCE6A2002CA533 /* RegisterUserView.swift */,
 				E30D0F3B20B8C5AD008FB956 /* RegisterGroupView.swift */,
-				E30D0F3920B8C59D008FB956 /* DayView.swift */,
+				E307492820C2102C000BEAC8 /* DateCell.swift */,
+				E307492720C2102C000BEAC8 /* DateCell.xib */,
 				E30D0F3720B8C58F008FB956 /* AdminView.swift */,
 				E30D0F3520B8C564008FB956 /* ChatView.swift */,
 				E303CE9220BCC3C80061E487 /* GoogleService-Info.plist */,
@@ -177,6 +183,7 @@
 				E303CE9320BCC3C80061E487 /* GoogleService-Info.plist in Resources */,
 				E3161F7720A0F5DB005CE07B /* Assets.xcassets in Resources */,
 				E3161F7520A0F5DB005CE07B /* Main.storyboard in Resources */,
+				E307492920C2102C000BEAC8 /* DateCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,14 +198,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Soberide/Pods-Soberide-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/JTCalendar/JTCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -232,8 +239,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E30D0F3A20B8C59D008FB956 /* DayView.swift in Sources */,
 				E3161F7220A0F5DB005CE07B /* ViewController.swift in Sources */,
+				E307492A20C2102C000BEAC8 /* DateCell.swift in Sources */,
+				E33D009F20C0EB4F002CA533 /* CustomCell.swift in Sources */,
 				E30D0F3420B8C544008FB956 /* MapView.swift in Sources */,
 				E33D009D20BCE6A2002CA533 /* RegisterUserView.swift in Sources */,
 				E30D0F3820B8C58F008FB956 /* AdminView.swift in Sources */,

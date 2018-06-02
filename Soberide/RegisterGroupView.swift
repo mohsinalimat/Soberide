@@ -27,13 +27,28 @@ class RegisterGroupView: UIViewController, UIPickerViewDataSource, UIPickerViewD
     @IBAction func finishRegistration(_ sender: UIButton) {
         let schoolIndex = pickerView.selectedRow(inComponent: 0);
         let orgName = organizationName.text!
-        databaseReference = Database.database().reference(withPath: schools[schoolIndex])
-        print("Gonna add " + schools[schoolIndex] + ", " + orgName + " to the DB")
-        let schoolRef = self.databaseReference.child(orgName)
+        //databaseReference = Database.database().reference(withPath: schools[schoolIndex])
+        databaseReference = Database.database().reference(withPath: "admins")
+        //print("Gonna add " + schools[schoolIndex] + ", " + orgName + " to the DB")
+        print("Gonna add " + username! + " to the admin DB")
+        let adminRef = self.databaseReference.child(username!)
         let base = [
-            "admin": username
+            "password" : password,
+            "school" : schools[schoolIndex],
+            "organization" : orgName
         ]
-        schoolRef.setValue(base)
+        adminRef.setValue(base)
+        
+        
+        
+        // create the alert
+        let alert = UIAlertController(title: "Success", message: "You have successfully registered your group. Return to the login screen to access your calendar.", preferredStyle: UIAlertControllerStyle.alert)
+
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
     
     //MARK: TextField stuff

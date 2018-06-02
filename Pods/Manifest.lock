@@ -21,7 +21,7 @@ PODS:
   - GoogleToolboxForMac/Defines (2.1.4)
   - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
     - GoogleToolboxForMac/Defines (= 2.1.4)
-  - JTCalendar (2.2.2)
+  - JTAppleCalendar (7.1.5)
   - leveldb-library (1.20)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -32,17 +32,17 @@ PODS:
 DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
-  - JTCalendar (~> 2.0)
+  - JTAppleCalendar (~> 7.0)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
     - FirebaseDatabase
     - FirebaseInstanceID
     - GoogleToolboxForMac
-    - JTCalendar
+    - JTAppleCalendar
     - leveldb-library
     - nanopb
 
@@ -53,10 +53,10 @@ SPEC CHECKSUMS:
   FirebaseDatabase: 5f0bc6134c5c237cf55f9e1249d406770a75eafd
   FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
-  JTCalendar: 20610270b29b309bab398f06fc9e2f1aed67a22c
+  JTAppleCalendar: 2d4f974f9f3c8b4964d51ca1f6e004883c031fbe
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: d4e756c8734e9878abfcb3b1067705ac4d93acb3
+PODFILE CHECKSUM: 02d1ca4534a06974d460328ed19606818cb3bb01
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

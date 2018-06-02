@@ -20,6 +20,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true;
     }
     
+    //MARK: Login stuff
+    @IBAction func login(_ sender: UIButton) {
+        performSegue(withIdentifier: "adminView", sender: sender)
+    }
+    
     //MARK: Registration segues
     @IBAction func registerGroup(_ sender: UIButton) {
         performSegue(withIdentifier: "registerGroupView", sender: sender)
@@ -27,16 +32,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        usernameText.delegate = self
-        passwordText.delegate = self
+//        usernameText.delegate = self
+//        passwordText.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    //Prepare to send user/pass info to any of three segues.
+    //MARK: Segue population
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "registerUserView" {
             let destVC = segue.destination as? RegisterUserView
@@ -48,7 +52,5 @@ class ViewController: UIViewController, UITextFieldDelegate {
             destVC?.password = passwordText.text
         }
     }
-
-
 }
 
