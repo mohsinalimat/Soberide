@@ -33,22 +33,14 @@ class RegisterGroupView: UIViewController, UIPickerViewDataSource, UIPickerViewD
         print("Gonna add " + username! + " to the admin DB")
         let adminRef = self.databaseReference.child(username!)
         let base = [
+            "name" : username!,
             "password" : password,
             "school" : schools[schoolIndex],
             "organization" : orgName
         ]
         adminRef.setValue(base)
         
-        
-        
-        // create the alert
-        let alert = UIAlertController(title: "Success", message: "You have successfully registered your group. Return to the login screen to access your calendar.", preferredStyle: UIAlertControllerStyle.alert)
-
-        // add an action (button)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
+        performSegue(withIdentifier: "unwindSegueToLogin", sender: self)
     }
     
     //MARK: TextField stuff

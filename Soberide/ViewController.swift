@@ -7,10 +7,16 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
+    var usersRef : DatabaseReference?
+    var adminRef : DatabaseReference?
+    
     //MARK: Properties
+    
     @IBOutlet weak var usernameText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     
@@ -20,20 +26,58 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true;
     }
     
-    //MARK: Login stuff
-    @IBAction func login(_ sender: UIButton) {
-        performSegue(withIdentifier: "adminView", sender: sender)
+    //MARK: Unwind
+    @IBAction func unwindToLogin(segue: UIStoryboardSegue) {
     }
     
-    //MARK: Registration segues
-    @IBAction func registerGroup(_ sender: UIButton) {
-        performSegue(withIdentifier: "registerGroupView", sender: sender)
+    //MARK: Login stuff
+    @IBAction func login(_ sender: UIButton) {
+        //Check all users for match
+        usersRef?.queryOrdered(byChild: "schools").observe(.value, with:
+            { snapshot in
+                for item in snapshot.children {
+                    print("checking a snapshot for users")
+                    //newSchools.append(School(snapshot: item as! DataSnapshot))
+                    let personTemp = Person(snapshot: item as! DataSnapshot)
+                    let name = personTemp.name
+                    let pass = personTemp.password
+                    print(name + " and " + pass)
+                    if(self.usernameText.text == name && self.passwordText.text == pass) {
+                        print("This person is in the user DB, granting access")
+                        self.performSegue(withIdentifier: "userView", sender: sender)
+                    }
+                }
+        })
+        
+        adminRef?.queryOrdered(byChild: "schools").observe(.value, with:
+            { snapshot in
+                for item in snapshot.children {
+                    print("checking a snapshot for admins")
+                    let personTemp = Person(snapshot: item as! DataSnapshot)
+                    let name = personTemp.name
+                    let pass = personTemp.password
+                    if(self.usernameText.text == name && self.passwordText.text == pass) {
+                        print("This person is in the admin DB, granting access")
+                        self.performSegue(withIdentifier: "adminView", sender: sender)
+                    }
+                }
+        })
+        // create the alert
+        let alert = UIAlertController(title: "Error", message: "There does not exist a user with those credentials. Check password or create an account.", preferredStyle: UIAlertControllerStyle.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        usernameText.delegate = self
-//        passwordText.delegate = self
+        usersRef = Database.database().reference().child("users")
+        adminRef = Database.database().reference().child("admins")
+        self.usernameText.delegate = self
+        self.passwordText.delegate = self
     }
 
     override func didReceiveMemoryWarning() {

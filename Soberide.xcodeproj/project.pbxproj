@@ -11,6 +11,8 @@
 		E303CE9320BCC3C80061E487 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E303CE9220BCC3C80061E487 /* GoogleService-Info.plist */; };
 		E307492920C2102C000BEAC8 /* DateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E307492720C2102C000BEAC8 /* DateCell.xib */; };
 		E307492A20C2102C000BEAC8 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E307492820C2102C000BEAC8 /* DateCell.swift */; };
+		E307492C20C21BA9000BEAC8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E307492B20C21BA9000BEAC8 /* Person.swift */; };
+		E307493320C23492000BEAC8 /* Calenday.swift in Sources */ = {isa = PBXBuildFile; fileRef = E307493220C23492000BEAC8 /* Calenday.swift */; };
 		E30D0F3220B8C537008FB956 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D0F3120B8C537008FB956 /* UserView.swift */; };
 		E30D0F3420B8C544008FB956 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D0F3320B8C544008FB956 /* MapView.swift */; };
 		E30D0F3620B8C564008FB956 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D0F3520B8C564008FB956 /* ChatView.swift */; };
@@ -22,7 +24,6 @@
 		E3161F7720A0F5DB005CE07B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3161F7620A0F5DB005CE07B /* Assets.xcassets */; };
 		E3161F7A20A0F5DB005CE07B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3161F7820A0F5DB005CE07B /* LaunchScreen.storyboard */; };
 		E33D009D20BCE6A2002CA533 /* RegisterUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33D009C20BCE6A2002CA533 /* RegisterUserView.swift */; };
-		E33D009F20C0EB4F002CA533 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33D009E20C0EB4F002CA533 /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		E303CE9220BCC3C80061E487 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E307492720C2102C000BEAC8 /* DateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateCell.xib; sourceTree = "<group>"; };
 		E307492820C2102C000BEAC8 /* DateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
+		E307492B20C21BA9000BEAC8 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		E307493220C23492000BEAC8 /* Calenday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calenday.swift; sourceTree = "<group>"; };
 		E30D0F3120B8C537008FB956 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		E30D0F3320B8C544008FB956 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		E30D0F3520B8C564008FB956 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
@@ -45,7 +48,6 @@
 		E3161F7920A0F5DB005CE07B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3161F7B20A0F5DB005CE07B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E33D009C20BCE6A2002CA533 /* RegisterUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserView.swift; sourceTree = "<group>"; };
-		E33D009E20C0EB4F002CA533 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +93,10 @@
 			children = (
 				E3161F6F20A0F5DB005CE07B /* AppDelegate.swift */,
 				E3161F7120A0F5DB005CE07B /* ViewController.swift */,
+				E307493220C23492000BEAC8 /* Calenday.swift */,
 				E3161F7320A0F5DB005CE07B /* Main.storyboard */,
-				E33D009E20C0EB4F002CA533 /* CustomCell.swift */,
 				E33D009C20BCE6A2002CA533 /* RegisterUserView.swift */,
+				E307492B20C21BA9000BEAC8 /* Person.swift */,
 				E30D0F3B20B8C5AD008FB956 /* RegisterGroupView.swift */,
 				E307492820C2102C000BEAC8 /* DateCell.swift */,
 				E307492720C2102C000BEAC8 /* DateCell.xib */,
@@ -239,9 +242,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E307492C20C21BA9000BEAC8 /* Person.swift in Sources */,
 				E3161F7220A0F5DB005CE07B /* ViewController.swift in Sources */,
 				E307492A20C2102C000BEAC8 /* DateCell.swift in Sources */,
-				E33D009F20C0EB4F002CA533 /* CustomCell.swift in Sources */,
 				E30D0F3420B8C544008FB956 /* MapView.swift in Sources */,
 				E33D009D20BCE6A2002CA533 /* RegisterUserView.swift in Sources */,
 				E30D0F3820B8C58F008FB956 /* AdminView.swift in Sources */,
@@ -249,6 +252,7 @@
 				E30D0F3C20B8C5AD008FB956 /* RegisterGroupView.swift in Sources */,
 				E30D0F3220B8C537008FB956 /* UserView.swift in Sources */,
 				E3161F7020A0F5DB005CE07B /* AppDelegate.swift in Sources */,
+				E307493320C23492000BEAC8 /* Calenday.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,12 +7,18 @@
 //
 
 import UIKit
-import JTAppleCalendar
+import Firebase
+import FirebaseDatabase
 
 class AdminView: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     @IBOutlet weak var monthlbl: UILabel!
+    
+    var databaseReference : DatabaseReference!
+    var nameTextField: UITextField?
+    var phoneTextField: UITextField?
+    var realDay : Int = 0
     
     var monthsArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     var currentMonthIndex = 0
@@ -27,6 +33,7 @@ class AdminView: UIViewController,UICollectionViewDataSource,UICollectionViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        databaseReference = Database.database().reference(withPath: "calendar")
         currentMonthIndex = Calendar.current.component(.month, from: Date())
         currentYear = Calendar.current.component(.year, from: Date())
         todaysDate = Calendar.current.component(.day, from: Date())
@@ -36,8 +43,6 @@ class AdminView: UIViewController,UICollectionViewDataSource,UICollectionViewDel
         presentYear=currentYear
         myCollectionView.delegate = self
         myCollectionView.dataSource = self
-        //         myCollectionView.register(DateCell.self, forCellWithReuseIdentifier: "DateCell")
-        //
         self.myCollectionView.register(UINib(nibName:"DateCell", bundle: nil), forCellWithReuseIdentifier: "DateCell")
     }
     
@@ -97,12 +102,49 @@ class AdminView: UIViewController,UICollectionViewDataSource,UICollectionViewDel
         return cell
     }
     
-    //THIS IS THE SELECTING FUNCTION,
+    //MARK: Calendar Input
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell=collectionView.cellForItem(at: indexPath)
         cell?.backgroundColor = UIColor.red
         print(indexPath);
+        realDay = indexPath[1] - 4
+        
+        //Create alert to input info
+        let alertController = UIAlertController(title: "Add driver for this day", message: "First their name, followed by a phone number", preferredStyle: .alert)
+        alertController.addTextField(configurationHandler: nameTextField)
+        alertController.addTextField(configurationHandler: phoneTextField)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: self.okHandler)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true)
     }
+
+    func nameTextField(textField: UITextField!) {
+        nameTextField = textField
+        nameTextField?.placeholder = "John Smith"
+    }
+    
+    func phoneTextField(textField: UITextField!) {
+        phoneTextField = textField
+        phoneTextField?.keyboardType = UIKeyboardType.numberPad
+        phoneTextField?.placeholder = "5414107366"
+    }
+    
+    func okHandler(alert: UIAlertAction!) {
+        let calendarReference = self.databaseReference.child(String(realDay))
+        let base = [
+            "day" : String(realDay),
+            "driver" : nameTextField?.text,
+            "contact": phoneTextField?.text
+        ]
+        calendarReference.setValue(base)
+    }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell=collectionView.cellForItem(at: indexPath)

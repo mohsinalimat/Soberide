@@ -20,6 +20,7 @@ class RegisterUserView: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     var databaseReference : DatabaseReference!
     let schools = ["Cal Poly SLO", "Cal Poly Ponomoa", "UCSB", "UCI", "UCLA", "USC"]
     let orgs = ["Theta Chi", "Sigma Nu", "Zeta Beta Tau", "Lambda Chi Alpha", "Ski Club", "GLO"]
+    
     //Passed in user/pass from signin screen.
     var username : String?
     var password : String?
@@ -32,20 +33,14 @@ class RegisterUserView: UIViewController, UIPickerViewDataSource, UIPickerViewDe
         print("Gonna add " + username! + " to the user DB")
         let userRef = self.databaseReference.child(username!)
         let base = [
+            "name" : username!,
             "password" : password,
             "school" : schools[schoolIndex],
             "organization" : orgs[orgIndex]
         ]
         userRef.setValue(base)
         
-        // create the alert
-        let alert = UIAlertController(title: "Success", message: "You have successfully registered as a user of " + orgs[orgIndex] + ". Return to the login screen to access your driver.", preferredStyle: UIAlertControllerStyle.alert)
-        
-        // add an action (button)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
+        performSegue(withIdentifier: "unwindToLoginFromUser", sender: self)
     }
     
     
