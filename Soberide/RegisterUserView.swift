@@ -72,15 +72,6 @@ class RegisterUserView: UIViewController, UIPickerViewDataSource, UIPickerViewDe
         super.viewDidLoad()
         self.schoolPicker.delegate = self
         self.orgPicker.delegate = self
-        //        for school in schools {
-        //            let schoolRef = self.databaseReference.child(school)
-        //            let base = [
-        //                "base": "N/A"
-        //            ]
-        //            schoolRef.setValue(base)
-        //        }
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {

@@ -21,25 +21,32 @@ class RegisterGroupView: UIViewController, UIPickerViewDataSource, UIPickerViewD
     var password : String?
     
     var databaseReference : DatabaseReference!
+    var schoolReference : DatabaseReference!
     let schools = ["Cal Poly SLO", "Cal Poly Ponomoa", "UCSB", "UCI", "UCLA", "USC"]
     
     //Adds organization to the corresponding school.
     @IBAction func finishRegistration(_ sender: UIButton) {
+        //Pull the school & organization name from the UI components
         let schoolIndex = pickerView.selectedRow(inComponent: 0);
         let orgName = organizationName.text!
-        //databaseReference = Database.database().reference(withPath: schools[schoolIndex])
+        
+        //Create references to create admin DB entry, and to the organizations per school DB.
         databaseReference = Database.database().reference(withPath: "admins")
-        //print("Gonna add " + schools[schoolIndex] + ", " + orgName + " to the DB")
-        print("Gonna add " + username! + " to the admin DB")
+        schoolReference = Database.database().reference(withPath: schools[schoolIndex])
         let adminRef = self.databaseReference.child(username!)
-        let base = [
+        let schoolRef = self.schoolReference.child(orgName)
+        let adminBase = [
             "name" : username!,
             "password" : password,
             "school" : schools[schoolIndex],
             "organization" : orgName
         ]
-        adminRef.setValue(base)
         
+        //Set values in DB
+        adminRef.setValue(adminBase)
+        schoolRef.setValue(orgName)
+        
+        //Return to login screen
         performSegue(withIdentifier: "unwindSegueToLogin", sender: self)
     }
     
@@ -71,15 +78,6 @@ class RegisterGroupView: UIViewController, UIPickerViewDataSource, UIPickerViewD
         super.viewDidLoad()
         self.pickerView.delegate = self
         organizationName.delegate = self
-//        for school in schools {
-//            let schoolRef = self.databaseReference.child(school)
-//            let base = [
-//                "base": "N/A"
-//            ]
-//            schoolRef.setValue(base)
-//        }
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
