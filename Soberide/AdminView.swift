@@ -16,6 +16,7 @@ class AdminView: UIViewController,UICollectionViewDataSource,UICollectionViewDel
     @IBOutlet weak var monthlbl: UILabel!
     
     var databaseReference : DatabaseReference!
+    var testDatabaseReference : DatabaseReference!
     var nameTextField: UITextField?
     var phoneTextField: UITextField?
     var realDay : Int = 0
@@ -134,13 +135,27 @@ class AdminView: UIViewController,UICollectionViewDataSource,UICollectionViewDel
     }
     
     func okHandler(alert: UIAlertAction!) {
-        let calendarReference = self.databaseReference.child(String(realDay))
-        let base = [
+        print("Day's date (by realDay): " + String(realDay))
+        print("Day's month: " + String(currentMonthIndex))
+//        let calendarReference = self.databaseReference.child(String(realDay))
+//        let base = [
+//            "day" : String(realDay),
+//            "driver" : nameTextField?.text,
+//            "contact": phoneTextField?.text
+//        ]
+//        calendarReference.setValue(base)
+        
+        
+        
+        //Possible improvement
+        testDatabaseReference = Database.database().reference(withPath: monthsArr[currentMonthIndex - 1])
+        let NewcalendarReference = self.testDatabaseReference.child(String(realDay))
+        let Newbase = [
             "day" : String(realDay),
             "driver" : nameTextField?.text,
             "contact": phoneTextField?.text
         ]
-        calendarReference.setValue(base)
+        NewcalendarReference.setValue(Newbase)
     }
     
     
