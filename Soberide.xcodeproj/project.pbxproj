@@ -24,6 +24,7 @@
 		E3161F7720A0F5DB005CE07B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3161F7620A0F5DB005CE07B /* Assets.xcassets */; };
 		E3161F7A20A0F5DB005CE07B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3161F7820A0F5DB005CE07B /* LaunchScreen.storyboard */; };
 		E33D009D20BCE6A2002CA533 /* RegisterUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33D009C20BCE6A2002CA533 /* RegisterUserView.swift */; };
+		E3A295BD20C4A7A400AE2510 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A295BC20C4A7A300AE2510 /* Organization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		E3161F7920A0F5DB005CE07B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3161F7B20A0F5DB005CE07B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E33D009C20BCE6A2002CA533 /* RegisterUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserView.swift; sourceTree = "<group>"; };
+		E3A295BC20C4A7A300AE2510 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Organization.swift; path = /Users/grantparton/Desktop/436/Soberide/Soberide/Organization.swift; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				E3161F6F20A0F5DB005CE07B /* AppDelegate.swift */,
+				E3A295BC20C4A7A300AE2510 /* Organization.swift */,
 				E3161F7120A0F5DB005CE07B /* ViewController.swift */,
 				E307493220C23492000BEAC8 /* Calenday.swift */,
 				E3161F7320A0F5DB005CE07B /* Main.storyboard */,
@@ -252,6 +255,7 @@
 				E30D0F3C20B8C5AD008FB956 /* RegisterGroupView.swift in Sources */,
 				E30D0F3220B8C537008FB956 /* UserView.swift in Sources */,
 				E3161F7020A0F5DB005CE07B /* AppDelegate.swift in Sources */,
+				E3A295BD20C4A7A400AE2510 /* Organization.swift in Sources */,
 				E307493320C23492000BEAC8 /* Calenday.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

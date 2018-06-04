@@ -38,6 +38,7 @@ class AdminView: UIViewController,UICollectionViewDataSource,UICollectionViewDel
         currentYear = Calendar.current.component(.year, from: Date())
         todaysDate = Calendar.current.component(.day, from: Date())
         firstWeekDayOfMonth = getFirstWeekDay()
+        monthlbl.text = monthsArr[currentMonthIndex - 1]
         
         presentMonthIndex=currentMonthIndex
         presentYear=currentYear
@@ -59,10 +60,8 @@ class AdminView: UIViewController,UICollectionViewDataSource,UICollectionViewDel
         
         myCollectionView.reloadData()
         monthlbl.text="\(monthsArr[currentMonthIndex-1]) \(currentYear)"
-        
-        
-        
     }
+    
     @IBAction func Nextbtn(_ sender: UIButton) {
         currentMonthIndex += 1
         if currentMonthIndex > 12 {

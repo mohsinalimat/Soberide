@@ -19,7 +19,7 @@ class RegisterUserView: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     
     var databaseReference : DatabaseReference!
     let schools = ["Cal Poly SLO", "Cal Poly Ponomoa", "UCSB", "UCI", "UCLA", "USC"]
-    let orgs = ["Theta Chi", "Sigma Nu", "Zeta Beta Tau", "Lambda Chi Alpha", "Ski Club", "GLO"]
+    var orgs = ["Theta Chi", "Sigma Nu", "Zeta Beta Tau", "Lambda Chi Alpha", "Ski Club", "GLO"]
     
     //Passed in user/pass from signin screen.
     var username : String?
@@ -66,8 +66,29 @@ class RegisterUserView: UIViewController, UIPickerViewDataSource, UIPickerViewDe
         return "N/A"
     }
     
+    //Function that loads second picker with organizations based on what is registered to the school in the DB
+//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//
+//        let pos = pickerView.selectedRow(inComponent: 0);
+//
+//        if(pos == 0) {
+//            //Update picker based on what school we're talking about
+//            orgs.removeAll()
+//            databaseReference = Database.database().reference(withPath: schools[0])
+//            databaseReference?.queryOrdered(byChild: schools[0]).observe(.value, with:
+//                { snapshot in
+//                    //For every organization of this school, add it to the array.
+//                    for item in snapshot.children {
+//                        let org = Organization(snapshot: item as! DataSnapshot)
+//                        self.orgs.append(org.organization!)
+//                    }
+//            })
+//            orgs = orgs.sorted()
+//            self.orgPicker.reloadAllComponents()
+//            //place = pickerView.selectedRow(inComponent: 1)
+//        }
+//    }
     
-    //MARK: Database Setup
     override func viewDidLoad() {
         super.viewDidLoad()
         self.schoolPicker.delegate = self
@@ -76,7 +97,6 @@ class RegisterUserView: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     

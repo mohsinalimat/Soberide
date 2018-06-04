@@ -24,17 +24,18 @@ class UserView: UIViewController {
         databaseReference = Database.database().reference(withPath: "calendar")
         
         //Load the view with the driver infomation
+        let now = Date()
         let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        formatter.timeStyle = .short
-        let str = formatter.string(from: Date())
+        formatter.dateStyle = .long
+        formatter.timeStyle = .long
+        let str = formatter.string(from: now)
+        print(str)
         var day = "1"
         
         //Check calendar for match
         databaseReference?.queryOrdered(byChild: "calendar").observe(.value, with:
             { snapshot in
                 for item in snapshot.children {
-                    print("checking a snapshot for users")
                     let calTemp = Calenday(snapshot: item as! DataSnapshot)
                     if(calTemp.day == day) {
                         self.nameLabel.text = calTemp.driver
