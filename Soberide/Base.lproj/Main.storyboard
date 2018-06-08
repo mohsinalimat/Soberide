@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jd7-oL-a8U">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -54,6 +54,14 @@
                                     <segue destination="n5t-6Y-bRZ" kind="show" id="vHg-D9-Vqi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZc-tt-ciN">
+                                <rect key="frame" x="251" y="621" width="124" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iPG-Qt-gB6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -61,11 +69,28 @@
                     <connections>
                         <outlet property="nameLabel" destination="BJK-mI-ZMt" id="48c-aL-oK1"/>
                         <outlet property="phoneLabel" destination="fz1-yU-dPL" id="VLB-um-bIH"/>
+                        <segue destination="fGb-NY-jzR" kind="unwind" identifier="logoutFromUser" unwindAction="unwindToLoginWithSegue:" id="PcG-lo-b9G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="fGb-NY-jzR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="685.60000000000002" y="-524.8875562218891"/>
+        </scene>
+        <!--chatView-->
+        <scene sceneID="sEK-z2-Ut5">
+            <objects>
+                <viewController title="chatView" id="o3E-r1-l8f" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KBG-U1-xQm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="d7Y-03-3rT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5cz-FG-hm7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1692" y="-965"/>
         </scene>
         <!--mapView-->
         <scene sceneID="IJX-ZA-vzS">
@@ -94,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ge7-Y5-vQJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1629.5999999999999" y="-525.78710644677665"/>
+            <point key="canvasLocation" x="1692" y="-211"/>
         </scene>
         <!--ViewController-->
         <scene sceneID="98M-SN-BT8">
@@ -353,6 +378,14 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThK-tI-9fA">
+                                <rect key="frame" x="257" y="609" width="118" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logout:" destination="ypJ-bi-vda" eventType="touchUpInside" id="rxK-jQ-tCB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -363,9 +396,11 @@
                     <connections>
                         <outlet property="monthlbl" destination="MLR-cw-5je" id="Dgw-0F-e6h"/>
                         <outlet property="myCollectionView" destination="yvt-vm-X2c" id="sGS-uc-7vR"/>
+                        <segue destination="bxQ-kZ-Jdy" kind="unwind" identifier="logoutFromAdmin" unwindAction="unwindToLoginWithSegue:" id="6HG-21-f8l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3u-s7-sK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bxQ-kZ-Jdy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="685.60000000000002" y="337.78110944527737"/>
         </scene>

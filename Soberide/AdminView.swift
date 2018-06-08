@@ -63,6 +63,11 @@ class AdminView: UIViewController,UICollectionViewDataSource,UICollectionViewDel
         monthlbl.text="\(monthsArr[currentMonthIndex-1]) \(currentYear)"
     }
     
+    
+    @IBAction func logout(_ sender: UIButton) {
+        performSegue(withIdentifier: "logoutFromAdmin", sender: self)
+    }
+    
     @IBAction func Nextbtn(_ sender: UIButton) {
         currentMonthIndex += 1
         if currentMonthIndex > 12 {

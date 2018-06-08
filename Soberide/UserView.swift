@@ -20,6 +20,11 @@ class UserView: UIViewController {
     
     var databaseReference : DatabaseReference!
     
+    //MARK: Logout with unwind
+    @IBAction func logout(_ sender: Any) {
+        performSegue(withIdentifier: "logoutFromUser", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
