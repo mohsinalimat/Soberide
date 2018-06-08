@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DDDB5FE6F671AEC0675F20AD8D11F1E0"
+               BlueprintIdentifier = "A830E6018E72EF20D7328C6DE65038A6"
                BuildableName = "Pods_Soberide.framework"
                BlueprintName = "Pods-Soberide"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DDDB5FE6F671AEC0675F20AD8D11F1E0"
+            BlueprintIdentifier = "A830E6018E72EF20D7328C6DE65038A6"
             BuildableName = "Pods_Soberide.framework"
             BlueprintName = "Pods-Soberide"
             ReferencedContainer = "container:Pods.xcodeproj">

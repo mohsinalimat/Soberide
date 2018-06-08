@@ -6,7 +6,9 @@ target 'Soberide' do
   use_frameworks!
   
   # Pods for Soberide
-  pod 'JTAppleCalendar', '~> 7.0'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage' 
+  pod 'JSQMessagesViewController'
 end
