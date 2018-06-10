@@ -13,14 +13,6 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-    
-    /*README
-     My app is pretty straightforward to use. The main issue I am having right now is with the segues, so you do have to manually set certain
-     views as the root view to test some screens (only the userview/admin view). I spent a lot of time structuring how I wanted my firebase database
-     to look, so my registration pages had a lot of work put into them. Sorry I am turning this in almost three days late, I'm sure you already
-     ready my email regarding my mono diagnosis this week. */
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

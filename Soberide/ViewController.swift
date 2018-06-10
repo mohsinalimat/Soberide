@@ -94,6 +94,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
             let destVC = segue.destination as? RegisterGroupView
             destVC?.username = usernameText.text
             destVC?.password = passwordText.text
+        } else if segue.identifier == "userView" {
+            let destVC = segue.destination as? UserView
+            destVC?.nameOfUser = usernameText.text
         }
     }
 }

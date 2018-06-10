@@ -15,7 +15,6 @@
 		E307493320C23492000BEAC8 /* Calenday.swift in Sources */ = {isa = PBXBuildFile; fileRef = E307493220C23492000BEAC8 /* Calenday.swift */; };
 		E30D0F3220B8C537008FB956 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D0F3120B8C537008FB956 /* UserView.swift */; };
 		E30D0F3420B8C544008FB956 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D0F3320B8C544008FB956 /* MapView.swift */; };
-		E30D0F3620B8C564008FB956 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D0F3520B8C564008FB956 /* ChatView.swift */; };
 		E30D0F3820B8C58F008FB956 /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D0F3720B8C58F008FB956 /* AdminView.swift */; };
 		E30D0F3C20B8C5AD008FB956 /* RegisterGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D0F3B20B8C5AD008FB956 /* RegisterGroupView.swift */; };
 		E3161F7020A0F5DB005CE07B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3161F6F20A0F5DB005CE07B /* AppDelegate.swift */; };
@@ -24,6 +23,8 @@
 		E3161F7720A0F5DB005CE07B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3161F7620A0F5DB005CE07B /* Assets.xcassets */; };
 		E3161F7A20A0F5DB005CE07B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3161F7820A0F5DB005CE07B /* LaunchScreen.storyboard */; };
 		E33D009D20BCE6A2002CA533 /* RegisterUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33D009C20BCE6A2002CA533 /* RegisterUserView.swift */; };
+		E375E4E620CAF94B006BFA64 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E375E4E520CAF94B006BFA64 /* Constants.swift */; };
+		E375E4EA20CAFC41006BFA64 /* chatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E375E4E920CAFC41006BFA64 /* chatView.swift */; };
 		E3A295BD20C4A7A400AE2510 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A295BC20C4A7A300AE2510 /* Organization.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +39,6 @@
 		E307493220C23492000BEAC8 /* Calenday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calenday.swift; sourceTree = "<group>"; };
 		E30D0F3120B8C537008FB956 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		E30D0F3320B8C544008FB956 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		E30D0F3520B8C564008FB956 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		E30D0F3720B8C58F008FB956 /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
 		E30D0F3B20B8C5AD008FB956 /* RegisterGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterGroupView.swift; sourceTree = "<group>"; };
 		E3161F6C20A0F5DB005CE07B /* Soberide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soberide.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +49,9 @@
 		E3161F7920A0F5DB005CE07B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3161F7B20A0F5DB005CE07B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E33D009C20BCE6A2002CA533 /* RegisterUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserView.swift; sourceTree = "<group>"; };
+		E375E4E220CAF861006BFA64 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		E375E4E520CAF94B006BFA64 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E375E4E920CAFC41006BFA64 /* chatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatView.swift; sourceTree = "<group>"; };
 		E3A295BC20C4A7A300AE2510 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Organization.swift; path = /Users/grantparton/Desktop/436/Soberide/Soberide/Organization.swift; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +78,7 @@
 		E3161F6320A0F5DB005CE07B = {
 			isa = PBXGroup;
 			children = (
+				E375E4E220CAF861006BFA64 /* Bridging-Header.h */,
 				E3161F6E20A0F5DB005CE07B /* Soberide */,
 				E3161F6D20A0F5DB005CE07B /* Products */,
 				FEE6E36F0DEB09905AD08F14 /* Pods */,
@@ -98,19 +102,20 @@
 				E3161F7120A0F5DB005CE07B /* ViewController.swift */,
 				E307493220C23492000BEAC8 /* Calenday.swift */,
 				E3161F7320A0F5DB005CE07B /* Main.storyboard */,
+				E375E4E920CAFC41006BFA64 /* chatView.swift */,
 				E33D009C20BCE6A2002CA533 /* RegisterUserView.swift */,
 				E307492B20C21BA9000BEAC8 /* Person.swift */,
 				E30D0F3B20B8C5AD008FB956 /* RegisterGroupView.swift */,
 				E307492820C2102C000BEAC8 /* DateCell.swift */,
 				E307492720C2102C000BEAC8 /* DateCell.xib */,
 				E30D0F3720B8C58F008FB956 /* AdminView.swift */,
-				E30D0F3520B8C564008FB956 /* ChatView.swift */,
 				E303CE9220BCC3C80061E487 /* GoogleService-Info.plist */,
 				E30D0F3320B8C544008FB956 /* MapView.swift */,
 				E30D0F3120B8C537008FB956 /* UserView.swift */,
 				E3161F7620A0F5DB005CE07B /* Assets.xcassets */,
 				E3161F7820A0F5DB005CE07B /* LaunchScreen.storyboard */,
 				E3161F7B20A0F5DB005CE07B /* Info.plist */,
+				E375E4E520CAF94B006BFA64 /* Constants.swift */,
 			);
 			path = Soberide;
 			sourceTree = "<group>";
@@ -255,7 +260,8 @@
 				E30D0F3420B8C544008FB956 /* MapView.swift in Sources */,
 				E33D009D20BCE6A2002CA533 /* RegisterUserView.swift in Sources */,
 				E30D0F3820B8C58F008FB956 /* AdminView.swift in Sources */,
-				E30D0F3620B8C564008FB956 /* ChatView.swift in Sources */,
+				E375E4E620CAF94B006BFA64 /* Constants.swift in Sources */,
+				E375E4EA20CAFC41006BFA64 /* chatView.swift in Sources */,
 				E30D0F3C20B8C5AD008FB956 /* RegisterGroupView.swift in Sources */,
 				E30D0F3220B8C537008FB956 /* UserView.swift in Sources */,
 				E3161F7020A0F5DB005CE07B /* AppDelegate.swift in Sources */,
@@ -403,6 +409,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grantparton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -418,6 +425,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grantparton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
