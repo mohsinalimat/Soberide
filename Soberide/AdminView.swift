@@ -14,6 +14,7 @@ class AdminView: UIViewController,UICollectionViewDataSource,UICollectionViewDel
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     @IBOutlet weak var monthlbl: UILabel!
+    @IBOutlet weak var howToText: UILabel!
     
     var databaseReference : DatabaseReference!
     var testDatabaseReference : DatabaseReference!
@@ -34,6 +35,7 @@ class AdminView: UIViewController,UICollectionViewDataSource,UICollectionViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        howToText.text = "How to use calendar: Select a day, then input name & phone number for the driver you'd like to designate for that day."
         databaseReference = Database.database().reference(withPath: "calendar")
         currentMonthIndex = Calendar.current.component(.month, from: Date())
         currentYear = Calendar.current.component(.year, from: Date())
