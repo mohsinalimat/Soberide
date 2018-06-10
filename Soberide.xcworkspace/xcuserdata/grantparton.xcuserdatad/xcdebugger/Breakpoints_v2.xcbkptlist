@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Soberide/ViewController.swift"
-            timestampString = "550281118.108392"
+            timestampString = "550293556.796155"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "login(_:)"
             landmarkType = "7">
          </BreakpointContent>

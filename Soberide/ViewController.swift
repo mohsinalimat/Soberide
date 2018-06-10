@@ -32,11 +32,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Login stuff
     @IBAction func login(_ sender: UIButton) {
+        print("User: " + self.usernameText.text!)
+        print("Pass: " + self.passwordText.text!)
         //Check all users for match
         usersRef?.queryOrdered(byChild: "schools").observe(.value, with:
             { snapshot in
                 for item in snapshot.children {
-                    print("checking a snapshot for users")
                     //newSchools.append(School(snapshot: item as! DataSnapshot))
                     let personTemp = Person(snapshot: item as! DataSnapshot)
                     let name = personTemp.name
@@ -44,7 +45,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     print(name + " and " + pass)
                     if(self.usernameText.text == name && self.passwordText.text == pass) {
                         print("This person is in the user DB, granting access")
-                        self.performSegue(withIdentifier: "userView", sender: sender)
+                        //self.performSegue(withIdentifier: "userView", sender: sender)
+                        self.dismiss(animated: false) {
+                            self.performSegue(withIdentifier: "userView", sender: sender)
+                        }
                     }
                 }
         })
@@ -58,7 +62,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     let pass = personTemp.password
                     if(self.usernameText.text == name && self.passwordText.text == pass) {
                         print("This person is in the admin DB, granting access")
-                        self.performSegue(withIdentifier: "adminView", sender: sender)
+                        //self.performSegue(withIdentifier: "adminView", sender: sender)
+                        self.dismiss(animated: false) {
+                            self.performSegue(withIdentifier: "adminView", sender: sender)
+                        }
                     }
                 }
         })
