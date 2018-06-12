@@ -19,7 +19,7 @@ class RegisterUserView: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     
     var databaseReference : DatabaseReference!
     let schools = ["Cal Poly SLO", "Cal Poly Ponomoa", "UCSB", "UCI", "UCLA", "USC"]
-    var orgs = ["Theta Chi", "Sigma Nu", "Zeta Beta Tau", "Lambda Chi Alpha", "Ski Club", "GLO"]
+    var orgs = ["Theta Chi", "Sigma Nu", "Zeta Beta Tau", "Lambda Chi Alpha", "Ski Club", "GLO", "demo group"]
     
     //Passed in user/pass from signin screen.
     var username : String?

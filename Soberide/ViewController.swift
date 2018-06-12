@@ -27,7 +27,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     //MARK: Unwind
-    @IBAction func unwindToLogin(segue: UIStoryboardSegue) {
+    @IBAction func unwindToLogin(segue: UIStoryboardSegue){
     }
     
     //MARK: Login stuff
@@ -42,13 +42,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     let personTemp = Person(snapshot: item as! DataSnapshot)
                     let name = personTemp.name
                     let pass = personTemp.password
-                    print(name + " and " + pass)
                     if(self.usernameText.text == name && self.passwordText.text == pass) {
                         print("This person is in the user DB, granting access")
                         //self.performSegue(withIdentifier: "userView", sender: sender)
-                        self.dismiss(animated: false) {
-                            self.performSegue(withIdentifier: "userView", sender: sender)
-                        }
+                        self.performSegue(withIdentifier: "userView", sender: sender)
                     }
                 }
         })
@@ -62,21 +59,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     let pass = personTemp.password
                     if(self.usernameText.text == name && self.passwordText.text == pass) {
                         print("This person is in the admin DB, granting access")
-                        //self.performSegue(withIdentifier: "adminView", sender: sender)
-                        self.dismiss(animated: false) {
-                            self.performSegue(withIdentifier: "adminView", sender: sender)
-                        }
+                        self.performSegue(withIdentifier: "adminView", sender: sender)
                     }
                 }
         })
-        // create the alert
-        let alert = UIAlertController(title: "Error", message: "There does not exist a user with those credentials. Check password or create an account.", preferredStyle: UIAlertControllerStyle.alert)
-        
-        // add an action (button)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
